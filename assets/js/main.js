@@ -63,8 +63,10 @@ const aboutSwp = new Swiper('.about-swp .swiper', {
 
 if (aboutSwp) {
     const swpFraction = document.querySelector('.about-swp__control .swp-fraction');
-    swpFraction.innerHTML = '';
-    swpFraction.innerHTML = `<span>${aboutSwp.activeIndex + 1}</span> / ${aboutSwp.slides.length}`;
+    if (swpFraction) {
+        swpFraction.innerHTML = '';
+        swpFraction.innerHTML = `<span>${aboutSwp.activeIndex + 1}</span> / ${aboutSwp.slides.length}`;
+    }
     
     aboutSwp.on('slideChange', function (e) {
         swpFraction.innerHTML = '';
@@ -89,8 +91,10 @@ const partnerSwp = new Swiper('.partner-swp .swiper', {
 
 if (partnerSwp) {
     const swpFraction = document.querySelector('.partner-swp__control .swp-fraction');
-    swpFraction.innerHTML = '';
-    swpFraction.innerHTML = `<span>${partnerSwp.activeIndex + 1}</span> / ${partnerSwp.slides.length}`;
+    if (swpFraction) {
+        swpFraction.innerHTML = '';
+        swpFraction.innerHTML = `<span>${partnerSwp.activeIndex + 1}</span> / ${partnerSwp.slides.length}`;
+    }
     
     partnerSwp.on('slideChange', function (e) {
         swpFraction.innerHTML = '';

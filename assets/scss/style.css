@@ -305,6 +305,9 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
 .form-inp::placeholder, .services-content__right .form-control::placeholder {
   color: #D9D9D9;
 }
+.form-inp:active, .services-content__right .form-control:active, .form-inp:hover, .services-content__right .form-control:hover {
+  border: 1px solid #0A0F24;
+}
 .form-inp.date, .services-content__right .date.form-control {
   appearance: none;
   -webkit-appearance: none;
@@ -2553,6 +2556,523 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 992px) {
   .tags-block__link {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.vacancy-home {
+  padding: 113px 0 100px;
+}
+@media screen and (max-width: 992px) {
+  .vacancy-home {
+    padding: 88px 0 60px;
+  }
+}
+.vacancy-home__container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+@media screen and (max-width: 992px) {
+  .vacancy-home__container {
+    gap: 30px;
+  }
+}
+.vacancy-home .text-h1 span {
+  display: inline;
+}
+@media screen and (max-width: 420px) {
+  .vacancy-home .text-h1 span {
+    display: block;
+  }
+}
+.vacancy-home__card {
+  width: 588px;
+  flex-shrink: 0;
+  background: #FFFFFF;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .vacancy-home__card {
+    width: 480px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .vacancy-home__card {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+.vacancy-home__card-wrap {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .vacancy-home__card-wrap {
+    margin-top: -10px;
+  }
+}
+.vacancy-home__card .card-price {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Unbounded", sans-serif;
+  color: #0A0F24;
+}
+@media screen and (max-width: 992px) {
+  .vacancy-home__card .card-price {
+    font-size: 18px;
+  }
+}
+.vacancy-home__card .card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.vacancy-home__card .card-list__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #5F5F5F;
+}
+@media screen and (max-width: 992px) {
+  .vacancy-home__card .card-list__item {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.vacancy-home__card .card-list__item .icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+}
+@media screen and (max-width: 992px) {
+  .vacancy-home__card .card-list__item .icon {
+    width: 30px;
+    height: 30px;
+  }
+  .vacancy-home__card .card-list__item .icon img {
+    width: 16px;
+    height: auto;
+  }
+}
+.vacancy-home__card .form-label {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 992px) {
+  .vacancy-home__card .form-label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.vacancy-home__card .btn-yellow {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+  height: 70px;
+}
+@media screen and (max-width: 992px) {
+  .vacancy-home__card .btn-yellow {
+    margin: 0;
+    height: 50px;
+  }
+}
+.vacancy-home__card .btn-yellow .btn-text {
+  font-size: 18px;
+}
+@media screen and (max-width: 992px) {
+  .vacancy-home__card .btn-yellow .btn-text {
+    font-size: 14px;
+  }
+}
+.vacancy-home .main-img {
+  width: calc(100% - 608px);
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 1200px) {
+  .vacancy-home .main-img {
+    width: calc(100% - 500px);
+  }
+}
+@media screen and (max-width: 992px) {
+  .vacancy-home .main-img {
+    display: none;
+  }
+}
+
+.job {
+  padding: 100px 0;
+  background: #FFFFFF;
+}
+@media screen and (max-width: 992px) {
+  .job {
+    padding: 60px 0;
+  }
+}
+.job .text-subtitle {
+  color: #B8B8B8;
+  margin-bottom: 10px;
+}
+.job-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 992px) {
+  .job-content {
+    flex-direction: column;
+    gap: 100px;
+    margin-bottom: 30px;
+  }
+}
+.job-left {
+  max-width: 754px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media screen and (max-width: 992px) {
+  .job-left {
+    max-width: 100%;
+    gap: 20px;
+  }
+}
+.job-left .text-title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  font-family: "Unbounded", sans-serif;
+  color: #0A0F24;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 992px) {
+  .job-left .text-title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.job-left .text-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+@media screen and (max-width: 992px) {
+  .job-left .text-list {
+    gap: 5px;
+  }
+}
+.job-left .text-list__item {
+  font-size: 18px;
+  line-height: 24px;
+  color: #23273A;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+@media screen and (max-width: 992px) {
+  .job-left .text-list__item {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.job-left .text-list__item .icon {
+  flex-shrink: 0;
+}
+.job-right {
+  width: 586px;
+  flex-shrink: 0;
+  border: 1px solid #D9D9D9;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 1100px) {
+  .job-right {
+    width: 480px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .job-right {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+.job-right__title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  font-family: "Unbounded", sans-serif;
+  color: #0A0F24;
+}
+@media screen and (max-width: 992px) {
+  .job-right__title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.job-right .form-control {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+@media screen and (max-width: 992px) {
+  .job-right .form-control {
+    flex-direction: column;
+    margin-top: -10px;
+  }
+}
+.job-right .form-group {
+  width: 100%;
+}
+.job-right .form-label {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 992px) {
+  .job-right .form-label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.job-right .form-radio {
+  position: relative;
+  z-index: 1;
+}
+.job-right .form-radio__wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.job-right .form-radio input {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  opacity: 0;
+}
+.job-right .form-radio__text {
+  width: 60px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  color: #878787;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Inter", sans-serif;
+}
+.job-right .form-radio input:checked ~ .form-radio__text {
+  background: #ECF100;
+  border-color: #ECF100;
+  color: #0A0F24;
+}
+.job-right .form-checkbox__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.job-right__price {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #0A0F24;
+  font-family: "Unbounded", sans-serif;
+}
+@media screen and (max-width: 992px) {
+  .job-right__price {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.job-right .line {
+  height: 0.5px;
+  width: calc(100% + 60px);
+  margin: 10px 0 10px -30px;
+  background: #D9D9D9;
+}
+@media screen and (max-width: 992px) {
+  .job-right .line {
+    margin: 0 0 0 -20px;
+    width: calc(100% + 40px);
+    border-width: 1px;
+  }
+}
+.job-right .description {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  color: #23273A;
+}
+@media screen and (max-width: 992px) {
+  .job-right .description {
+    font-size: 16px;
+    line-height: 20xp;
+  }
+}
+.job-right .btn-yellow {
+  height: 70px;
+  width: 100%;
+  justify-content: space-between;
+}
+@media screen and (max-width: 992px) {
+  .job-right .btn-yellow {
+    height: 50px;
+  }
+}
+.job-right .btn-yellow .btn-text {
+  font-size: 18px;
+}
+@media screen and (max-width: 992px) {
+  .job-right .btn-yellow .btn-text {
+    font-size: 14px;
+  }
+}
+.job-foot {
+  background: #0A0F24;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 30px;
+}
+@media screen and (max-width: 576px) {
+  .job-foot {
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+  }
+}
+.job-foot__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+@media screen and (max-width: 992px) {
+  .job-foot__item {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .job-foot__item br {
+    display: none;
+  }
+}
+.job-foot__text {
+  font-size: 20px;
+  line-height: 24px;
+}
+@media screen and (max-width: 992px) {
+  .job-foot__text {
+    font-size: 16px;
+  }
+}
+
+.vacancy-list {
+  padding: 50px 0;
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+  background: #FFFFFF;
+}
+@media screen and (max-width: 992px) {
+  .vacancy-list {
+    padding: 60px 0;
+  }
+}
+.vacancy-list__container {
+  position: relative;
+  z-index: 1;
+}
+.vacancy-list__container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(100% - 30px);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #FFF);
+}
+@media screen and (max-width: 992px) {
+  .vacancy-list__container::before {
+    display: none;
+  }
+}
+.vacancy-list__title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  font-family: "Unbounded", sans-serif;
+  color: #0A0F24;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 992px) {
+  .vacancy-list__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.vacancy-list__description {
+  font-size: 18px;
+  line-height: 24px;
+  color: #5F5F5F;
+}
+@media screen and (max-width: 992px) {
+  .vacancy-list__description {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.vacancy-list .text-more {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+@media screen and (max-width: 992px) {
+  .vacancy-list .text-more {
+    position: static;
+    margin-top: 10px;
     font-size: 14px;
     line-height: 18px;
   }
