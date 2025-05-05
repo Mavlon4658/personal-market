@@ -1672,6 +1672,14 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
         padding-top: 60px;
     }
 
+    &.vacancy-about {
+        padding-bottom: 100px;
+
+        @include media(992) {
+            padding-bottom: 60px;
+        }
+    }
+
     .text {
         &-subtitle {
             color: $color-grey-4;
