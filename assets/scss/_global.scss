@@ -1,0 +1,44 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Onest:wght@100..900&family=Unbounded:wght@200..900&display=swap');
+
+$font-inter: "Inter", sans-serif;
+$font-inter-tight: "Inter Tight", sans-serif;
+$font-unbounded: "Unbounded", sans-serif;
+$font-manrope: "Manrope", sans-serif;
+$font-onest: "Onest", sans-serif;
+// Fonts end
+
+// Colors
+$color-black-1: #000000;
+$color-black-2: #0A0F24;
+$color-black-3: #23273A;
+$color-black-4: #43455B;
+$color-black-5: #090909;
+$color-black-6: #242440;
+$color-yellow-1: #ECF100;
+$color-yellow-2: #FCFF72;
+$color-grey-1: #5F5F5F;
+$color-grey-2: #878787;
+$color-grey-3: #D9D9D9;
+$color-grey-4: #B8B8B8;
+$color-grey-5: #919191;
+$color-grey-6: #636371;
+$color-grey-7: #E9E9E9;
+$color-blue-1: #2491FF;
+$color-blue-2: #1075DA;
+$color-white: #FFFFFF;
+$color-orange: #FF6838;
+// Colors end
+
+@mixin media($value) {
+    @if ($value < 0) {
+        @media screen and (min-width: calc($value * (-1)) + 'px') {
+            @content;
+        }
+
+    } @else {
+        @media screen and (max-width: $value + 'px') {
+            @content;
+        }
+    }
+}
