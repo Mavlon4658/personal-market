@@ -121,7 +121,7 @@ const reviewSwp = new Swiper('.review-swp', {
     },
 })
 
-if (reviewSwp) {
+if (document.querySelector('.review-swp')) {
     const swpFraction = document.querySelector('.review-swp__control .swp-fraction');
     swpFraction.innerHTML = '';
     swpFraction.innerHTML = `<span>${reviewSwp.activeIndex + 1}</span> / ${reviewSwp.slides.length}`;
@@ -132,3 +132,12 @@ if (reviewSwp) {
     });
 }
 
+const artileSwp = new Swiper('.related-articles .swiper', {
+    slides: 1,
+    spaceBetween: 20,
+    speed: 800,
+    navigation: {
+        nextEl: '.related-articles .swp-btn__next',
+        prevEl: '.related-articles .swp-btn__prev',
+    }
+})
