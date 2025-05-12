@@ -141,3 +141,50 @@ const artileSwp = new Swiper('.related-articles .swiper', {
         prevEl: '.related-articles .swp-btn__prev',
     }
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (document.querySelector('.form-date')) {
+        flatpickr('.form-date', {
+            enableTime: false,
+            monthSelectorType: "static",
+            dateFormat: "m/d/y",
+        });
+    }
+})
+
+// modals
+const modalCls = ['.service-modal'];
+
+modalCls.forEach(cls => {
+    const modal = document.querySelector(cls);
+    const modalOpenBtns = document.querySelectorAll(`${cls}__open`);
+    const modalCloseBtn = document.querySelector(`${cls} .modal-close`);
+    const modalBg = document.querySelector(`${cls} .modal-bg`);
+
+    const modalClose = () => {
+        bodyVisible();
+        modal.classList.remove('active');
+        modal.classList.add('end-active');
+        setTimeout(() => {
+            modal.classList.remove('end-active');
+        }, 400);
+    }
+
+    if (modalOpenBtns.length) {
+        modalOpenBtns.forEach(btn => {
+            btn.onclick = e => {
+                e.preventDefault();
+                modal.classList.add('active');
+                bodyHidden();
+            }
+        })
+    }
+
+    if (modalCloseBtn) {
+        modalCloseBtn.onclick = () => modalClose();
+    }
+
+    modalBg.onclick = () => modalClose();
+
+})
+// modals end
