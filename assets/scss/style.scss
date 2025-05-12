@@ -1706,6 +1706,39 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
             }
         }
     }
+
+    &.bg-light {
+        background: $color-white;
+        border-bottom: 1px solid $color-grey-3;
+
+        .text {
+            &-subtitle {
+                color: $color-grey-4;
+            }
+
+            &-h2 {
+                color: $color-black-2;
+            }
+        }
+
+        .work {
+            &-content {
+                &__left {
+                    background: $color-black-3;
+
+                    &-text {
+                        color: $color-white;
+                    }
+                }
+
+                &__right {
+                    .logo {
+                        background: $color-black-3;
+                    }
+                }
+            }
+        }
+    }
 }
 // Work end
 
@@ -4386,3 +4419,259 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
     }
 }
 // Text block end
+
+// Specific
+.specific {
+    &-container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 113px 0 100px;
+
+        @include media(992) {
+            gap: 20px;
+        }
+    }
+
+    .text-h1 span {
+        display: inline;
+    }
+
+    &-head {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+
+        @include media(1200) {
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .main-img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 30px 0 20px;
+            object-position: center top;
+
+            @include media(-1200) {
+                display: none !important;
+            }
+
+            @include media(850) {
+                height: 500px;
+            }
+
+            @include media(600) {
+                height: 238px;
+            }
+        }
+
+        &__right {
+            background: $color-white;
+            border-radius: 15px;
+            width: 382px;
+            flex-shrink: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            @include media(1200) {
+                width: 100%;
+            }
+
+            &-item {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+
+            &-text {
+                font-size: 20px;
+                line-height: 24px;
+                color: $color-grey-1;
+            }
+        }
+    }
+
+    &-foot {
+        display: flex;
+        align-items: stretch;
+        gap: 20px;
+
+        @include media(1200) {
+            flex-direction: column-reverse;
+            gap: 0px;
+        }
+
+        &__left {
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+
+            @include media(1200) {
+                padding: 0;
+            }
+
+            .main-img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                object-fit: cover;
+                z-index: -1;
+
+                @include media(1200) {
+                    display: none;
+                }
+            }
+
+            .job-foot {
+                width: 100%;
+
+                @include media(1200) {
+                    border: 0;
+                    background: transparent;
+                }
+            }
+        }
+
+        .job-right {
+            background: $color-white;
+            width: 586px;
+
+            @include media(1350) {
+                width: 500px;
+            }
+
+            @include media(1200) {
+                width: 100%;
+            }
+        }
+    }
+}
+// Specific end
+
+// Error block
+.error-block {
+    background: $color-white;
+    padding: 30px;
+    width: 586px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include media(650) {
+        width: calc(100% - 20px);
+        gap: 30px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    &__wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: bold;
+            font-family: $font-unbounded;
+            color: $color-black-2;
+        }
+
+        .close-btn {
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $color-yellow-1;
+            border-radius: 10px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        gap: 15px;
+
+        h1 {
+            font-size: 150px;
+            line-height: 113px;
+            font-weight: bold;
+            font-family: $font-unbounded;
+            color: $color-black-3;
+
+            @include media(650) {
+                font-size: 96px;
+                line-height: 80px;
+            }
+        }
+
+        .icon {
+            position: absolute;
+            left: 50%;
+            top: 43px;
+            transform: translateX(-50%);
+
+            @include media(650) {
+                top: 30px;
+                width: 25px;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: bold;
+            color: $color-black-1;
+
+            @include media(650) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .btn-yellow {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+// Error block end
