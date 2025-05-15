@@ -4027,7 +4027,7 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
         padding: 60px 0;
     }
 
-    &__container {
+    article {
         display: flex;
         flex-direction: column;
         gap: 50px;
@@ -4049,59 +4049,59 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
         }
     }
 
-    ul {
-        &:nth-child(2) {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-
-            li, h1, h2, h3, h4, h5 {
-                color: $color-black-1;
-            }
-
-            h1 {
-                font-size: 60px;
-                font-weight: bold;
-                font-family: $font-unbounded;
-                line-height: 74px;
-            }
-
-            h2 {
-                font-size: 40px;
-                line-height: 50px;
-                font-family: $font-unbounded;
-                font-weight: bold;
-            }
-
-            h3 {
-                font-size: 30px;
-                line-height: 37px;
-                font-weight: bold;
-                font-family: $font-unbounded;
-            }
-
-            h4 {
-                font-size: 24px;
-                line-height: 30px;
-                font-weight: bold;
-                font-family: $font-unbounded;
-            }
-
-            h5 {
-                font-size: 18px;
-                line-height: 22px;
-                font-weight: bold;
-                font-family: $font-unbounded;
-            }
+    .text-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    
+        div, h1, h2, h3, h4, h5 {
+            color: $color-black-1;
         }
+    
+        h1 {
+            font-size: 60px;
+            font-weight: bold;
+            font-family: $font-unbounded;
+            line-height: 74px;
+        }
+    
+        h2 {
+            font-size: 40px;
+            line-height: 50px;
+            font-family: $font-unbounded;
+            font-weight: bold;
+        }
+    
+        h3 {
+            font-size: 30px;
+            line-height: 37px;
+            font-weight: bold;
+            font-family: $font-unbounded;
+        }
+    
+        h4 {
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: bold;
+            font-family: $font-unbounded;
+        }
+    
+        h5 {
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: bold;
+            font-family: $font-unbounded;
+        }
+    }
 
-        &:nth-child(8) {
+    .work-list {
+        ul  {
             @extend .job-foot;
-
+    
             li {
                 @extend .job-foot__item;
             }
-
+    
             p {
                 @extend .job-foot__text;
                 color: $color-white;
@@ -4113,174 +4113,160 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
         @extend .text-more;
     }
 
-    section {
-        &:nth-child(3) {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 20px;
+    .text-card {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    
+        @include media(992) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 30px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            p {
+                font-size: 20px;
+                line-height: 24px;
+                color: $color-black-2;
+
+                @include media(992) {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                
+            }
+        }
         
+        blockquote {
+            padding: 0 0 0 20px;
+            position: relative;
+            font-weight: bold;
+            max-width: 597px;
+            background: transparent;
+            border: 0;
+            font-size: 20px;
+            line-height: 24px;
+            color: $color-black-2;
+    
             @include media(992) {
-                grid-template-columns: repeat(1, minmax(0, 1fr));
-                gap: 30px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 3px;
+                height: 100%;
+                background: $color-yellow-1;
+            }
+        }
+
+        img {
+            min-height: 396px;
+            object-fit: cover;
+            border-radius: 15px;
+
+            @include media(992) {
+                width: 100%;
+                min-height: inherit;
+                height: 230px;
+            }
+        }
+    }
+
+    .text-content {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+
+        @include media(800) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            img {
+                flex-shrink: 0;
             }
 
-            ul {
+            li {
                 display: flex;
-                flex-direction: column;
-                gap: 30px;
+                align-items: flex-start;
+                gap: 15px;
+            }
 
-                li {
-                    font-size: 20px;
-                    line-height: 24px;
-                    color: $color-black-2;
+            p {
+                font-size: 18px;
+                line-height: 24px;
+                color: $color-black-2;
+    
+                @include media(992) {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+
+    .table {
+        h3 {
+            font-size: 30px;
+            line-height: 37px;
+            font-weight: bold;
+            color: $color-black-2;
+            font-family: $font-unbounded;
+            margin-bottom: 30px;
+
+            @include media(992) {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+
+        table {
+            border: 1px solid $color-grey-3;
+            border-radius: 10px;
+            width: 100%;
+            border-collapse: collapse;
+
+            tr:not(:last-child) {
+                border-bottom: 1px solid $color-grey-3;
+            }
+
+            td {
+                width: 50%;
+
+                &:nth-child(1) {
+                    font-size: 18px;
+                    line-height: 22px;
+                    font-weight: bold;
+                    color: $color-black-1;
+                    padding: 20px 40px;
     
                     @include media(992) {
+                        padding: 20px 10px;
                         font-size: 14px;
                         line-height: 20px;
                     }
-
-                    &.alert-text {
-                        padding-left: 20px;
-                        position: relative;
-                        font-weight: bold;
-                        max-width: 597px;
-                        
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                            width: 3px;
-                            height: 100%;
-                            background: $color-yellow-1;
-                        }
-                    }
-                }
-            }
-
-            img {
-                min-height: 396px;
-                object-fit: cover;
-                border-radius: 15px;
-    
-                @include media(992) {
-                    width: 100%;
-                    min-height: inherit;
-                    height: 230px;
-                }
-            }
-        }
-
-        &:nth-child(4) {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 20px;
-
-            @include media(800) {
-                grid-template-columns: repeat(1, minmax(0, 1fr));
-                gap: 10px;
-            }
-
-            ul {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-    
-                img {
-                    flex-shrink: 0;
                 }
 
-                li {
-                    display: flex;
-                    align-items: flex-start;
-                    gap: 15px;
-                }
-
-                p {
-                    font-size: 18px;
-                    line-height: 24px;
-                    color: $color-black-2;
-        
-                    @include media(992) {
-                        font-size: 14px;
-                        line-height: 18px;
-                    }
-                }
-            }
-        }
-
-        &:nth-child(5) {
-            h3 {
-                font-size: 30px;
-                line-height: 37px;
-                font-weight: bold;
-                color: $color-black-2;
-                font-family: $font-unbounded;
-                margin-bottom: 30px;
-    
-                @include media(992) {
-                    font-size: 18px;
-                    line-height: 22px;
-                }
-            }
-
-            ul {
-                border: 1px solid $color-grey-3;
-                border-radius: 10px;
-                overflow: hidden;
-                gap: 0px;
-
-                li {
-                    display: grid;
-                    grid-template-columns: repeat(2, minmax(0, 1fr));
-        
-                    &:not(:last-child) {
-                        border-bottom: 1px solid $color-grey-3;
-                    }
-                }
-
-                p {
-                    &:nth-child(1) {
-                        font-size: 18px;
-                        line-height: 22px;
-                        font-weight: bold;
-                        color: $color-black-1;
-                        padding: 20px 40px;
-                        display: flex;
-                        align-items: center;
-        
-                        @include media(992) {
-                            padding: 20px 10px;
-                            font-size: 14px;
-                            line-height: 20px;
-                        }
-                    }
-
-                    &:nth-child(2) {
-                        border-left: 1px solid $color-grey-3;
-                        font-size: 18px;
-                        line-height: 24px;
-                        color: $color-black-1;
-                        padding: 20px 40px;
-                        display: flex;
-                        align-items: center;
-        
-                        @include media(992) {
-                            font-size: 14px;
-                            line-height: 18px;
-                            padding: 20px 10px;
-                        }
-                    }
-                }
-
-                a {
+                &:nth-child(2) {
                     border-left: 1px solid $color-grey-3;
                     font-size: 18px;
                     line-height: 24px;
-                    color: $color-blue-1;
+                    color: $color-black-1;
                     padding: 20px 40px;
-                    display: flex;
-                    align-items: center;
     
                     @include media(992) {
                         font-size: 14px;
@@ -4289,94 +4275,112 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
                     }
                 }
             }
+
+            a {
+                font-size: 18px;
+                line-height: 24px;
+                color: $color-blue-1;
+
+                @include media(992) {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+    
+    section {
+        h3 {
+            font-size: 30px;
+            line-height: 37px;
+            font-weight: bold;
+            color: $color-black-2;
+            font-family: $font-unbounded;
+            margin-bottom: 30px;
+
+            @include media(992) {
+                font-size: 18px;
+                line-height: 22px;
+            }
         }
 
-        &:nth-child(9) {
-            h3 {
-                font-size: 30px;
-                line-height: 37px;
-                font-weight: bold;
-                color: $color-black-2;
-                font-family: $font-unbounded;
-                margin-bottom: 30px;
+        ul {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 10px;
+            
+            @include media(1280) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            
+            @include media(700) {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+
+            li {
+                border: 1px solid $color-grey-3;
+                border-radius: 15px;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
     
                 @include media(992) {
-                    font-size: 18px;
-                    line-height: 22px;
+                    padding: 20px;
                 }
             }
 
-            ul {
-                display: grid;
-                grid-template-columns: repeat(4, minmax(0, 1fr));
-                gap: 10px;
-                
-                @include media(1280) {
-                    grid-template-columns: repeat(2, minmax(0, 1fr));
-                }
-                
-                @include media(700) {
-                    grid-template-columns: repeat(1, minmax(0, 1fr));
-                }
+            span {
+                width: 45px;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                border: 1px solid $color-grey-3;
+            }
 
-                li {
-                    border: 1px solid $color-grey-3;
-                    border-radius: 15px;
-                    padding: 30px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    gap: 20px;
-        
-                    @include media(992) {
-                        padding: 20px;
-                    }
-                }
+            p {
+                font-size: 20px;
+                line-height: 24px;
+                color: $color-black-2;
 
-                span {
-                    width: 45px;
-                    height: 45px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 10px;
-                    border: 1px solid $color-grey-3;
-                }
-
-                p {
-                    font-size: 20px;
-                    line-height: 24px;
-                    color: $color-black-2;
-    
-                    @include media(992) {
-                        font-size: 14px;
-                        line-height: 18px;
-                    }
+                @include media(992) {
+                    font-size: 14px;
+                    line-height: 18px;
                 }
             }
         }
+    }
 
-        &:nth-child(10) {
-            @extend .articles-right;
-            width: 100%;
+    .content {
+        @extend .articles-right;
+        width: 100%;
 
-            ul {
-                @extend .parent-list;
+        ul {
+            @extend .parent-list;
+            list-style: none;
+            counter-reset: item;
 
-                h4 {
-                    @extend .parent-list__text;
+            h4 {
+                @extend .parent-list__text;
+            }
+
+            li {
+                @extend .parent-list__item;
+                counter-increment: item;
+
+                &:before {
+                    content: counters(item, ".") ".";
                 }
+            }
+            
+            ul {
+                @extend .child-list;
 
                 li {
-                    @extend .parent-list__item;
-                }
-                
-                ul {
-                    @extend .child-list;
-
-                    li {
-                        @extend .child-list__item;
-                    }
+                    @extend .child-list__item;
                 }
             }
         }
