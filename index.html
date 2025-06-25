@@ -83,7 +83,7 @@
                     <a href="#" class="btn-yellow">
                         <img src="./assets/images/telegram-icon.svg" alt="">
                     </a>
-                    <a href="#" class="btn-dark">Обратный звонок</a>
+                    <a href="#" class="btn-dark service-modal__open">Обратный звонок</a>
                 </div>
                 <button class="header-bars btn-yellow">
                     <img src="./assets/images/bars.svg" alt="">
@@ -130,6 +130,112 @@
             </div>
         </section>
         <!-- Menu end -->
+
+        <!-- modals -->
+        <section class="modal service-modal">
+            <div class="modal-bg">
+                <img src="./assets/images/service-modal-bg.png" alt="">
+            </div>
+            <div class="modal-dialog__wrap">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-head">
+                            <h2>Заказать услугу:</h2>
+                            <button class="modal-close">
+                                <img src="./assets/images/times.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="form-control">
+                            <label for="" class="form-label">Ваше имя:</label>
+                            <input type="text" placeholder="имя" class="form-inp">
+                        </div>
+                        <div class="form-wrap">
+                            <div class="form-group">
+                                <div class="form-control">
+                                    <label for="" class="form-label">Ваш телефон:</label>
+                                    <input type="tel" placeholder="+7" class="form-inp">
+                                </div>
+                                <div class="form-control">
+                                    <label for="" class="form-label">Ваш e-mail:</label>
+                                    <input type="email" placeholder="Введите вашу почту" class="form-inp">
+                                </div>
+                            </div>
+                            <div class="form-control">
+                                <label for="" class="form-label">На какую дату</label>
+                                <div class="form-control__in">
+                                    <input type="text" class="form-inp form-date" placeholder="__/__/____">
+                                    <button class="btn-yellow">
+                                        <img src="./assets/images/btn-icon-3.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-control">
+                                    <label for="" class="form-label">Город:</label>
+                                    <input type="text" placeholder="Город" class="form-inp">
+                                </div>
+                                <div class="form-control">
+                                    <label for="" class="form-label">Улица:</label>
+                                    <input type="text" placeholder="Улица" class="form-inp">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-control">
+                                    <label for="" class="form-label">№ дома:</label>
+                                    <input type="text" placeholder="№ дома" class="form-inp">
+                                </div>
+                                <div class="form-control">
+                                    <label for="" class="form-label">Корпус/литера:</label>
+                                    <input type="text" placeholder="Корпус" class="form-inp">
+                                </div>
+                                <div class="form-control">
+                                    <label for="" class="form-label">Квартира/офис:</label>
+                                    <input type="text" placeholder="Квар./офис" class="form-inp">
+                                </div>
+                            </div>
+                            <div class="form-contorl">
+                                <label for="" class="form-label">Ваши пожелания и уточнения:</label>
+                                <textarea name="" id="" placeholder="Ваш комментарий" class="form-inp textarea"></textarea>
+                            </div>
+                            <button class="btn-yellow">
+                                <span class="btn-text">Отправить заявку</span>
+                                <img src="./assets/images/play-icon.svg" alt="" class="btn-icon">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="modal callback-modal">
+            <div class="modal-bg">
+                <img src="./assets/images/service-modal-bg.png" alt="">
+            </div>
+            <div class="modal-dialog__wrap">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-head">
+                            <h2>Обратный звонок</h2>
+                            <button class="modal-close">
+                                <img src="./assets/images/times.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="form-control">
+                            <label for="" class="form-label">Ваше имя:</label>
+                            <input type="text" placeholder="имя" class="form-inp">
+                        </div>
+                        <div class="form-control">
+                            <label for="" class="form-label">Ваш телефон:</label>
+                            <input type="tel" placeholder="+7" class="form-inp">
+                        </div>
+                        <button class="btn-yellow">
+                            <span class="btn-text">Отправить заявку</span>
+                            <img src="./assets/images/play-icon.svg" alt="" class="btn-icon">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- modals end -->
     
         <main>
 
