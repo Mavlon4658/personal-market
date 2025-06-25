@@ -184,7 +184,48 @@ modalCls.forEach(cls => {
         modalCloseBtn.onclick = () => modalClose();
     }
 
-    modalBg.onclick = () => modalClose();
+    if (modalBg) {
+        modalBg.onclick = () => modalClose();
+    }
 
 })
 // modals end
+
+// Header location
+const headerLocation = document.querySelectorAll('.header-location');
+if (headerLocation.length) {
+    headerLocation.forEach(el => {
+        const btn = el.querySelector('.header-location__btn');
+        const list = document.querySelectorAll('.header-location__list li');
+        btn.onclick = () => {
+            el.classList.toggle('active');
+        }
+        if (list.length) {
+            list.forEach(listBtn => {
+                listBtn.onclick = () => {
+                    btn.querySelector('span').textContent = listBtn.textContent;
+                    btn.querySelector('input').value = listBtn.textContent;
+                    list.forEach(a => {
+                        if (a == listBtn) {
+                            a.classList.add('select');
+                        } else {
+                            a.classList.remove('select')
+                        }
+                    });
+                    el.classList.remove('active');
+                }
+            })
+        }
+    })
+}
+
+window.addEventListener('click', event => {
+    if (headerLocation.length) {
+        headerLocation.forEach(el => {
+            if (!el.contains(event.target)) {
+                el.classList.remove('active')
+            }
+        })
+    }
+})
+// Header location end

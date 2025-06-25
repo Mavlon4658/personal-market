@@ -483,17 +483,66 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
     }
 
     &-location {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        font-family: $font-inter;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 600;
-        color: $color-black-5;
+        position: relative;
 
-        @include media(1400) {
+        &__btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-family: $font-inter;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 600;
+            color: $color-black-5;
+    
+            @include media(1400) {
+                display: none;
+            }
+        }
+
+        &__list {
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            transform: translateY(100%);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 25%);
+            min-width: 120px;
+            padding: 5px 0;
             display: none;
+
+            li {
+                font-size: 14px;
+                line-height: 100%;
+                font-family: $font-inter-tight;
+                font-weight: 500;
+                color: $color-black-1;
+                padding: 5px 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: space-between;
+                width: 100%;
+                cursor: pointer;
+                user-select: none;
+
+                img {
+                    display: none;
+                }
+
+                &.select {
+                    img {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        &.active {
+            .header-location__list {
+                display: block;
+            }
         }
     }
 
