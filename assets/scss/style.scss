@@ -3308,6 +3308,20 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
                 display: none;
             }
         }
+
+        &.active {
+            &::before {
+                display: none;
+            }
+
+            .vacancy-list__description {
+                max-height: inherit;
+            }
+
+            .text-more {
+                display: none;
+            }
+        }
     }
 
     &__title {
@@ -3328,10 +3342,13 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
         font-size: 18px;
         line-height: 24px;
         color: $color-grey-1;
+        max-height: 168px;
+        overflow: hidden;
 
         @include media(992) {
             font-size: 14px;
             line-height: 18px;
+            max-height: inherit;
         }
     }
 
@@ -3762,7 +3779,7 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
             counter-reset: item;
 
             li {
-                counter-incpxent: item;
+                counter-increment: item;
 
                 &:before {
                     content: counters(item, ".") ".";

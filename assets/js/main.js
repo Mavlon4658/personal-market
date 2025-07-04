@@ -197,8 +197,10 @@ if (headerLocation.length) {
     headerLocation.forEach(el => {
         const btn = el.querySelector('.header-location__btn');
         const list = document.querySelectorAll('.header-location__list li');
-        btn.onclick = () => {
-            el.classList.toggle('active');
+        if (btn) {
+            btn.onclick = () => {
+                el.classList.toggle('active');
+            }
         }
         if (list.length) {
             list.forEach(listBtn => {
@@ -217,6 +219,16 @@ if (headerLocation.length) {
             })
         }
     })
+}
+
+const vacancyList = document.querySelector('.vacancy-list__container');
+const vacancyListShow = document.querySelector('.vacancy-list__container .text-more');
+
+if (vacancyList) {
+    vacancyListShow.onclick = e => {
+        e.preventDefault();
+        vacancyList.classList.add('active');
+    }
 }
 
 window.addEventListener('click', event => {

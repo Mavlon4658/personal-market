@@ -3155,6 +3155,15 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 }
+.vacancy-list__container.active::before {
+  display: none;
+}
+.vacancy-list__container.active .vacancy-list__description {
+  max-height: inherit;
+}
+.vacancy-list__container.active .text-more, .vacancy-list__container.active .text-block a, .text-block .vacancy-list__container.active a {
+  display: none;
+}
 .vacancy-list__title {
   font-size: 24px;
   line-height: 30px;
@@ -3173,11 +3182,14 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   line-height: 24px;
   color: #5F5F5F;
+  max-height: 168px;
+  overflow: hidden;
 }
 @media screen and (max-width: 992px) {
   .vacancy-list__description {
     font-size: 14px;
     line-height: 18px;
+    max-height: inherit;
   }
 }
 .vacancy-list .text-more, .vacancy-list .text-block a, .text-block .vacancy-list a {
@@ -3585,7 +3597,7 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
   counter-reset: item;
 }
 .articles-right ul li, .text-block .content ul li {
-  counter-incpxent: item;
+  counter-increment: item;
 }
 .articles-right ul li:before, .text-block .content ul li:before {
   content: counters(item, ".") ".";
