@@ -1404,6 +1404,7 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
         padding: 10px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: 10px;
 
         @include media(992) {
@@ -1426,6 +1427,13 @@ button, select, input, textarea, li, div, p, h1, h2, h3, h4, h5, h6 {
             @include media(576) {
                 grid-template-columns: repeat(1, minmax(0, 1fr));
             }
+        }
+
+        &__head, &__foot {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .main-img {
