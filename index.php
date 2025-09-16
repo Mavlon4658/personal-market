@@ -1,3 +1,8 @@
+<?php
+    header("HTTP/1.1 301 Moved Permanently");
+    header("Location: https://personal-market.ru");
+    exit;
+<?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
