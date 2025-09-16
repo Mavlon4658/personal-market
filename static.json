@@ -4,6 +4,11 @@
             "source": "/",
             "destination": "https://personal-market.ru/",
             "type": 301
+        },
+        {
+            "source": "/404.html",
+            "destination": "https://personal-market.ru/404.html",
+            "type": 301
         }
     ]
 }
