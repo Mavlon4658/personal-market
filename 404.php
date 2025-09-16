@@ -29,7 +29,7 @@
                     <img src="./assets/images/error-page-icon.png" alt="" class="icon">
                     <p>Станица не существует или удалена</p>
                 </div>
-                <a href="/" class="btn-yellow">
+                <a href="./index.php" class="btn-yellow">
                     <span class="btn-text">На главную</span>
                     <img src="./assets/images/play-icon.svg" alt="" class="btn-icon">
                 </a>
