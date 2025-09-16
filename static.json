@@ -1,0 +1,9 @@
+{
+    "redirects": [
+        {
+            "source": "/",
+            "destination": "https://personal-market.ru/",
+            "type": 301
+        }
+    ]
+}
